@@ -4,12 +4,17 @@ export default function Footer() {
   return (
     <footer className={css.footer}>
       <div className={css.content}>
-        <p>© {new Date().getFullYear()} NoteHub. All rights reserved.</p>
+        <p>
+          © {new Date().getFullYear()} NoteHub.
+          All rights reserved.
+        </p>
         <div className={css.wrap}>
-          <p>Developer: Mykola Zelman</p>
+          <p>Developer: Kateryna Havryna</p>
           <p>
-            Contact us:
-            <a href="mailto:koliazelman@gmail.com">koliazelman@gmail.com</a>
+            Contact us:{" "}
+            <a href="mailto:khavryna@gmail.com">
+              khavryna@gmail.com
+            </a>
           </p>
         </div>
       </div>
