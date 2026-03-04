@@ -10,8 +10,7 @@ import Pagination from "../../components/Pagination/Pagination";
 import NoteList from "../../components/NoteList/NoteList";
 import Modal from "../../components/Modal/Modal";
 import NoteForm from "../../components/NoteForm/NoteForm";
-
-import { fetchNotes } from "../../lib/api";
+import { fetchNotes } from "@/lib/api/notes";
 
 const PER_PAGE = 12;
 
