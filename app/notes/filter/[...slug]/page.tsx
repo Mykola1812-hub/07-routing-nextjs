@@ -5,14 +5,13 @@ import NotesFilterClient from "./NotesFilter.client";
 
 const PER_PAGE = 12;
 
-interface NotesFilterPageProps {
-  params: {
-    tag: string[];
-  };
-}
+type NotesFilterPageProps = {
+  params: { slug: string[] } | Promise<{ slug: string[] }>;
+};
 
 export default async function NotesFilterPage({ params }: NotesFilterPageProps) {
-  const tagParam = params.tag?.[0] ?? "all";
+  const { slug } = await Promise.resolve(params);
+  const tagParam = slug?.[0] ?? "all";
   const tagForApi = tagParam === "all" ? undefined : tagParam;
   const tagForKey = tagForApi ?? "all";
 
